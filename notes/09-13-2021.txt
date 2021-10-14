@@ -1,0 +1,51 @@
+09-13-2021
+Going through using github
+Looking at commits for a repository, each commit has a unique ID, showed it on github
+and then on a local repository (git log)
+
+git status showed if files were changed, used git add eg_file.txt to add to be pushed to
+github
+
+git commit -m "Message" adds the commit to your local git repo
+
+git push origin master - pushes it to github
+
+git rebase -i commit_id
+
+If you try to just push to github it will get an error, so have to used the -f flag
+git push origin master -f 
+
+Changed git repo on github
+
+git fetch origin to fetch the changes
+
+git status show that the git repo on github was changed
+
+git rebase origin/master (instead of git pull, since git pull can cause conflicts when
+the files are pulled)
+
+Spoke about pull request that attempts to change files that have to be approved before
+being commited to the main repo
+
+Spoke about forking on github which creates a copy of the repo
+
+Showed how to do a fork and then rebase it to become updated with the master branch
+
+git checkout -b branchname (to create a branch)	
+
+git log
+
+Spoke about debugging
+
+Adding structure to your code
+
+Types of methods
+	-Top down approach (writing pseudocode of your general solution
+	-Bottom up approach
+	-Solve the problem first - then improve/refine
+
+General:
+	-Boring code is good code: keep it simple
+	-don't commit to specificity, try and solve the general problem	
+	-functions with small bodies > one function with large body
+	-read code before testing

@@ -33,7 +33,7 @@ The following steps create a GitHub Repository.
 
 ### Copy URL for cloning
 
-Click on the green button for your GitHub repo, and ensure it is showing the url for **Clone with HTTPS**  (other option is "Clone with SSH" - for this, you must have followed optional setup step 2). Copy that URL.
+Click on the green button for your GitHub repo, and ensure it is showing the url for **Clone with HTTPS**  (other option is **"Clone with SSH"** - for this, you must have followed optional setup step 2). Copy that URL.
  
 <img src="../images/github_clone_button.png" align="left" height="40" width="180" >   <br> <br>
 
@@ -57,6 +57,18 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 ```
 
+With SSH, it should be:
+```
+git clone git@github.com:gallettilance/CS506-Fall2021.git
+git@github.com:gallettilance/CS506-Fall2021.git
+Cloning into 'CS506-Fall2021'...
+remote: Enumerating objects: 93, done.
+remote: Counting objects: 100% (93/93), done.
+remote: Compressing objects: 100% (87/87), done.
+remote: Total 93 (delta 8), reused 84 (delta 4), pack-reused 0
+Receiving objects: 100% (93/93), 2.17 MiB | 6.12 MiB/s, done.
+Resolving deltas: 100% (8/8), done.	
+```
 ## Step 5:  `cd` into the repo
 
 <kbd> cd <repo_name> </kbd>
@@ -74,6 +86,14 @@ git remote -v
 origin	https://github.com/gallettilance/CS506-Fall2021.git (fetch)
 origin	https://github.com/gallettilance/CS506-Fall2021.git (push)
 ```
+If you plan to use SSH keys and clone the repository with SSH, it should be:
+
+```bash
+git remote -v
+origin	git@github.com:gallettilance/CS506-Fall2021.git (fetch)
+origin	git@github.com:gallettilance/CS506-Fall2021.git (push)
+```
+
 
 ## Step 7: create a branch
 
@@ -170,6 +190,10 @@ Ensure the file does not appear.
 <kbd> git push origin \<my new branch\> </kbd>  
 
 **Note:**  to `push` a changes is to push from Git (local, terminal) to GitHub (browser account, remote)
+
+Due to the deprecation of password authentication on Github, you need to set up token to connect Github when using HTTPS protocol. Further guidance are available [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
+	
+On the other hand, you can also use SSH protocol to connect without typing username and passcode anymore. 
 
 ## Step 11: look at files on working branch (on GitHub)
 
